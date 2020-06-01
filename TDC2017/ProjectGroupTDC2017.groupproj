@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2926FAEA-49D7-405D-B283-998C265E31D8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Camera101\Camera101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FireUI101\FireUI101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Effects101\Effects101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IBLite101\IBLite101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SQLite101\SQLite101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CData101\CDataSF.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CData102\CDataSAP.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Camera101">
+        <MSBuild Projects="Camera101\Camera101.dproj"/>
+    </Target>
+    <Target Name="Camera101:Clean">
+        <MSBuild Projects="Camera101\Camera101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Camera101:Make">
+        <MSBuild Projects="Camera101\Camera101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FireUI101">
+        <MSBuild Projects="FireUI101\FireUI101.dproj"/>
+    </Target>
+    <Target Name="FireUI101:Clean">
+        <MSBuild Projects="FireUI101\FireUI101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FireUI101:Make">
+        <MSBuild Projects="FireUI101\FireUI101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Effects101">
+        <MSBuild Projects="Effects101\Effects101.dproj"/>
+    </Target>
+    <Target Name="Effects101:Clean">
+        <MSBuild Projects="Effects101\Effects101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Effects101:Make">
+        <MSBuild Projects="Effects101\Effects101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IBLite101">
+        <MSBuild Projects="IBLite101\IBLite101.dproj"/>
+    </Target>
+    <Target Name="IBLite101:Clean">
+        <MSBuild Projects="IBLite101\IBLite101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IBLite101:Make">
+        <MSBuild Projects="IBLite101\IBLite101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SQLite101">
+        <MSBuild Projects="SQLite101\SQLite101.dproj"/>
+    </Target>
+    <Target Name="SQLite101:Clean">
+        <MSBuild Projects="SQLite101\SQLite101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SQLite101:Make">
+        <MSBuild Projects="SQLite101\SQLite101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CDataSF">
+        <MSBuild Projects="CData101\CDataSF.dproj"/>
+    </Target>
+    <Target Name="CDataSF:Clean">
+        <MSBuild Projects="CData101\CDataSF.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CDataSF:Make">
+        <MSBuild Projects="CData101\CDataSF.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CDataSAP">
+        <MSBuild Projects="CData102\CDataSAP.dproj"/>
+    </Target>
+    <Target Name="CDataSAP:Clean">
+        <MSBuild Projects="CData102\CDataSAP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CDataSAP:Make">
+        <MSBuild Projects="CData102\CDataSAP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Camera101;FireUI101;Effects101;IBLite101;SQLite101;CDataSF;CDataSAP"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Camera101:Clean;FireUI101:Clean;Effects101:Clean;IBLite101:Clean;SQLite101:Clean;CDataSF:Clean;CDataSAP:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Camera101:Make;FireUI101:Make;Effects101:Make;IBLite101:Make;SQLite101:Make;CDataSF:Make;CDataSAP:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

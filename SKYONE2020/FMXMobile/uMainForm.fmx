@@ -1,0 +1,190 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 548
+  ClientWidth = 498
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 498.000000000000000000
+    Size.Height = 548.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = Dots
+    Sizes = (
+      498s
+      548s
+      498s
+      548s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ToolBar1: TToolBar
+        Size.Width = 498.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label1: TLabel
+          Align = Contents
+          Size.Width = 498.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'CEP Mobile'
+          TabOrder = 0
+        end
+      end
+      object ListBox1: TListBox
+        Align = Client
+        Size.Width = 498.000000000000000000
+        Size.Height = 504.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        ItemHeight = 44.000000000000000000
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 498.000000000000000000
+        Viewport.Height = 504.000000000000000000
+        object ListBoxItem1: TListBoxItem
+          Selectable = False
+          StyleLookup = 'listboxitemrightdetail'
+          TabOrder = 0
+          Text = 'CEP'
+          object edtCEP: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Horizontal
+            TabOrder = 0
+            Position.X = 100.000000000000000000
+            Position.Y = 8.000000000000000000
+            Margins.Left = 100.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 388.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object ListBoxItem2: TListBoxItem
+          Selectable = False
+          Position.Y = 44.000000000000000000
+          TabOrder = 1
+          object btnBuscarCEP: TButton
+            Align = Center
+            Margins.Top = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'buttonstyle'
+            TabOrder = 0
+            Text = 'Buscar CEP'
+            OnClick = btnBuscarCEPClick
+          end
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 11.000000000000000000
+      Size.Height = 11.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      object ListBox2: TListBox
+        Align = Client
+        Size.Width = 498.000000000000000000
+        Size.Height = 504.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        ItemHeight = 44.000000000000000000
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 498.000000000000000000
+        Viewport.Height = 504.000000000000000000
+        object lbiCEP: TListBoxItem
+          Selectable = False
+          ItemData.Detail = 'CEP'
+          StyleLookup = 'listboxitembottomdetail'
+          TabOrder = 0
+          Text = '00000-000'
+        end
+        object lbiLogradouro: TListBoxItem
+          Selectable = False
+          ItemData.Detail = 'Logradouro'
+          Position.Y = 44.000000000000000000
+          StyleLookup = 'listboxitembottomdetail'
+          TabOrder = 2
+        end
+        object lbiBairro: TListBoxItem
+          Selectable = False
+          ItemData.Detail = 'Bairro'
+          Position.Y = 88.000000000000000000
+          StyleLookup = 'listboxitembottomdetail'
+          TabOrder = 1
+        end
+        object lbiCidade: TListBoxItem
+          Selectable = False
+          ItemData.Detail = 'Cidade/UF'
+          Position.Y = 132.000000000000000000
+          StyleLookup = 'listboxitembottomdetail'
+          TabOrder = 3
+        end
+      end
+      object ToolBar2: TToolBar
+        Size.Width = 498.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label2: TLabel
+          Align = Contents
+          Size.Width = 498.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'CEP Mobile'
+          TabOrder = 0
+        end
+        object Button1: TButton
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'backtoolbutton'
+          TabOrder = 1
+          Text = 'Voltar'
+          OnClick = Button1Click
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5912CC0E-A55F-446C-BCD8-AFA89C2630D8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Monolito\Monolito.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MonolitoRefatorado\MonolitoRefatorado.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MonolitoRefatoradoIsolado\MonolitoRefatoradoIsolado.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ServiçoCEPs\CEPs.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MonolitoChamandoServicoCEPs\MonolitoChamandoServicoCEPs.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FMXMobile\FMXMobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Monolito">
+        <MSBuild Projects="Monolito\Monolito.dproj"/>
+    </Target>
+    <Target Name="Monolito:Clean">
+        <MSBuild Projects="Monolito\Monolito.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Monolito:Make">
+        <MSBuild Projects="Monolito\Monolito.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MonolitoRefatorado">
+        <MSBuild Projects="MonolitoRefatorado\MonolitoRefatorado.dproj"/>
+    </Target>
+    <Target Name="MonolitoRefatorado:Clean">
+        <MSBuild Projects="MonolitoRefatorado\MonolitoRefatorado.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MonolitoRefatorado:Make">
+        <MSBuild Projects="MonolitoRefatorado\MonolitoRefatorado.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MonolitoRefatoradoIsolado">
+        <MSBuild Projects="MonolitoRefatoradoIsolado\MonolitoRefatoradoIsolado.dproj"/>
+    </Target>
+    <Target Name="MonolitoRefatoradoIsolado:Clean">
+        <MSBuild Projects="MonolitoRefatoradoIsolado\MonolitoRefatoradoIsolado.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MonolitoRefatoradoIsolado:Make">
+        <MSBuild Projects="MonolitoRefatoradoIsolado\MonolitoRefatoradoIsolado.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CEPs">
+        <MSBuild Projects="ServiçoCEPs\CEPs.dproj"/>
+    </Target>
+    <Target Name="CEPs:Clean">
+        <MSBuild Projects="ServiçoCEPs\CEPs.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CEPs:Make">
+        <MSBuild Projects="ServiçoCEPs\CEPs.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MonolitoChamandoServicoCEPs">
+        <MSBuild Projects="MonolitoChamandoServicoCEPs\MonolitoChamandoServicoCEPs.dproj"/>
+    </Target>
+    <Target Name="MonolitoChamandoServicoCEPs:Clean">
+        <MSBuild Projects="MonolitoChamandoServicoCEPs\MonolitoChamandoServicoCEPs.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MonolitoChamandoServicoCEPs:Make">
+        <MSBuild Projects="MonolitoChamandoServicoCEPs\MonolitoChamandoServicoCEPs.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXMobile">
+        <MSBuild Projects="FMXMobile\FMXMobile.dproj"/>
+    </Target>
+    <Target Name="FMXMobile:Clean">
+        <MSBuild Projects="FMXMobile\FMXMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXMobile:Make">
+        <MSBuild Projects="FMXMobile\FMXMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Monolito;MonolitoRefatorado;MonolitoRefatoradoIsolado;CEPs;MonolitoChamandoServicoCEPs;FMXMobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Monolito:Clean;MonolitoRefatorado:Clean;MonolitoRefatoradoIsolado:Clean;CEPs:Clean;MonolitoChamandoServicoCEPs:Clean;FMXMobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Monolito:Make;MonolitoRefatorado:Make;MonolitoRefatoradoIsolado:Make;CEPs:Make;MonolitoChamandoServicoCEPs:Make;FMXMobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

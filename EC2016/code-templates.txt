@@ -1,0 +1,36 @@
+  if AContext.User = nil then
+    AResponse.RaiseError(401, '', '')
+  else
+    AResponse.Body.SetValue(TJSONString.Create('Testando RAD Server!'), True);
+
+---
+
+var
+  fMem: TMemoryStream;
+begin
+  fMem := TMemoryStream.Create;
+  try
+    CustomerTable.Open;
+    FDSchemaAdapter1.SaveToStream(fMem, TFDStorageFormat.sfJSON);
+    AResponse.Body.SetStream(fMem, 'application/json', True);
+  except
+    on E: Exception do
+    begin
+      fMem.Free;
+      raise;
+    end;
+  end;
+end;
+
+---
+
+var fMem: TStream;
+begin
+  if not ARequest.Body.TryGetStream(fMem) then
+    raise Exception.Create('Nada para atualizar...');
+  fMem.Position := 0;
+  FDSchemaAdapter1.LoadFromStream(fMem, TFDStorageFormat.sfJSON);
+  FDSchemaAdapter1.ApplyUpdates;
+end;
+
+	

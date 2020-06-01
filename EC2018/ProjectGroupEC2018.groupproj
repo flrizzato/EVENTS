@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E37C1DAD-AF81-4815-ADE6-DE3E8368FAD1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="VCLStyles\VCLStyles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CommonDialogStyling\VCLDialogStyling.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MSAccess\FDMSAccess.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Paradox\FDParadox.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VCLStyles">
+        <MSBuild Projects="VCLStyles\VCLStyles.dproj"/>
+    </Target>
+    <Target Name="VCLStyles:Clean">
+        <MSBuild Projects="VCLStyles\VCLStyles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLStyles:Make">
+        <MSBuild Projects="VCLStyles\VCLStyles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLDialogStyling">
+        <MSBuild Projects="CommonDialogStyling\VCLDialogStyling.dproj"/>
+    </Target>
+    <Target Name="VCLDialogStyling:Clean">
+        <MSBuild Projects="CommonDialogStyling\VCLDialogStyling.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLDialogStyling:Make">
+        <MSBuild Projects="CommonDialogStyling\VCLDialogStyling.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FDMSAccess">
+        <MSBuild Projects="MSAccess\FDMSAccess.dproj"/>
+    </Target>
+    <Target Name="FDMSAccess:Clean">
+        <MSBuild Projects="MSAccess\FDMSAccess.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FDMSAccess:Make">
+        <MSBuild Projects="MSAccess\FDMSAccess.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FDParadox">
+        <MSBuild Projects="Paradox\FDParadox.dproj"/>
+    </Target>
+    <Target Name="FDParadox:Clean">
+        <MSBuild Projects="Paradox\FDParadox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FDParadox:Make">
+        <MSBuild Projects="Paradox\FDParadox.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VCLStyles;VCLDialogStyling;FDMSAccess;FDParadox"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VCLStyles:Clean;VCLDialogStyling:Clean;FDMSAccess:Clean;FDParadox:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VCLStyles:Make;VCLDialogStyling:Make;FDMSAccess:Make;FDParadox:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

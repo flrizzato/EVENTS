@@ -1,0 +1,63 @@
+inherited Form2_iPhone55in: TForm2_iPhone55in
+  ClientHeight = 716
+  ClientWidth = 414
+  DesignerMasterStyle = 2
+  inherited TabControl1: TTabControl
+    Size.Width = 414.000000000000000000
+    Size.Height = 716.000000000000000000
+    Sizes = (
+      414s
+      716s
+      414s
+      716s)
+    inherited TabItem1: TTabItem
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      inherited ToolBar1: TToolBar
+        Size.Width = 414.000000000000000000
+        inherited Label1: TLabel
+          StyledSettings = [Size, Style, FontColor]
+          Size.Width = 414.000000000000000000
+        end
+      end
+      inherited ListBox1: TListBox
+        Size.Width = 414.000000000000000000
+        Size.Height = 672.000000000000000000
+        Viewport.Width = 414.000000000000000000
+        Viewport.Height = 672.000000000000000000
+        inherited ListBoxItem1: TListBoxItem
+          inherited edtCEP: TEdit
+            Size.Width = 304.000000000000000000
+          end
+        end
+      end
+    end
+    inherited TabItem2: TTabItem
+      ExplicitSize.cx = 11.000000000000000000
+      ExplicitSize.cy = 11.000000000000000000
+      inherited ListBox2: TListBox
+        Size.Width = 414.000000000000000000
+        Size.Height = 672.000000000000000000
+        Viewport.Width = 414.000000000000000000
+        Viewport.Height = 672.000000000000000000
+        inherited lbiCidade: TListBoxItem [2]
+          Position.Y = 88.000000000000000000
+        end
+        inherited lbiBairro: TListBoxItem [3]
+          Position.Y = 132.000000000000000000
+        end
+      end
+      inherited ToolBar2: TToolBar
+        Size.Width = 414.000000000000000000
+        inherited Label2: TLabel
+          Size.Width = 414.000000000000000000
+        end
+        inherited Button1: TButton
+          Margins.Top = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+        end
+      end
+    end
+  end
+end

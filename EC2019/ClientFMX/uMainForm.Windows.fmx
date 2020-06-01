@@ -1,0 +1,90 @@
+inherited MainForm_Windows: TMainForm_Windows
+  DesignerMasterStyle = 0
+  inherited TabControl1: TTabControl
+    Sizes = (
+      640s
+      591s
+      640s
+      591s)
+    inherited TabItem1: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ListView1: TListView
+        ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited CalloutRectangle1: TCalloutRectangle
+        inherited Label1: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+    end
+    inherited TabItem2: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ListBox1: TListBox
+        Viewport.Width = 630.000000000000000000
+        Viewport.Height = 533.000000000000000000
+        inherited ListBoxItem1: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem2: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem3: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem4: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem5: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem6: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem7: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem8: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem9: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem10: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem11: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited ListBoxItem12: TListBoxItem
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited Rectangle1: TRectangle
+        inherited Button1: TButton
+          StyledSettings = [Family, Size, FontColor]
+          Size.Width = 40.000000000000000000
+          StyleLookup = 'priortoolbuttonbordered'
+          Text = ''
+        end
+        inherited Button2: TButton
+          StyledSettings = [Family, Size, FontColor]
+          StyleLookup = 'toolbutton'
+        end
+        inherited Button3: TButton
+          StyledSettings = [Family, Size, FontColor]
+          StyleLookup = 'toolbutton'
+        end
+        inherited Button4: TButton
+          StyledSettings = [Family, Size, FontColor]
+          StyleLookup = 'trashtoolbuttonbordered'
+        end
+        inherited Button5: TButton
+          StyledSettings = [Family, Size, FontColor]
+          StyleLookup = 'composetoolbuttonbordered'
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{41956974-12F9-4BC0-8084-FB5208114969}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="console101\console101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="linuxdata101\linuxdata101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dsemployee\dsemployee.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="rsemployee\rsemployee.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ClientFMX\ClientFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LocalDB\LocalDB.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ControlsDesktop\ControlsDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MoleculeHero\MoleculeHero.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="console101">
+        <MSBuild Projects="console101\console101.dproj"/>
+    </Target>
+    <Target Name="console101:Clean">
+        <MSBuild Projects="console101\console101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="console101:Make">
+        <MSBuild Projects="console101\console101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="linuxdata101">
+        <MSBuild Projects="linuxdata101\linuxdata101.dproj"/>
+    </Target>
+    <Target Name="linuxdata101:Clean">
+        <MSBuild Projects="linuxdata101\linuxdata101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="linuxdata101:Make">
+        <MSBuild Projects="linuxdata101\linuxdata101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dsemployee">
+        <MSBuild Projects="dsemployee\dsemployee.dproj"/>
+    </Target>
+    <Target Name="dsemployee:Clean">
+        <MSBuild Projects="dsemployee\dsemployee.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dsemployee:Make">
+        <MSBuild Projects="dsemployee\dsemployee.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="rsemployee">
+        <MSBuild Projects="rsemployee\rsemployee.dproj"/>
+    </Target>
+    <Target Name="rsemployee:Clean">
+        <MSBuild Projects="rsemployee\rsemployee.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rsemployee:Make">
+        <MSBuild Projects="rsemployee\rsemployee.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClientFMX">
+        <MSBuild Projects="ClientFMX\ClientFMX.dproj"/>
+    </Target>
+    <Target Name="ClientFMX:Clean">
+        <MSBuild Projects="ClientFMX\ClientFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClientFMX:Make">
+        <MSBuild Projects="ClientFMX\ClientFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LocalDB">
+        <MSBuild Projects="LocalDB\LocalDB.dproj"/>
+    </Target>
+    <Target Name="LocalDB:Clean">
+        <MSBuild Projects="LocalDB\LocalDB.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LocalDB:Make">
+        <MSBuild Projects="LocalDB\LocalDB.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ControlsDemo">
+        <MSBuild Projects="ControlsDesktop\ControlsDemo.dproj"/>
+    </Target>
+    <Target Name="ControlsDemo:Clean">
+        <MSBuild Projects="ControlsDesktop\ControlsDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ControlsDemo:Make">
+        <MSBuild Projects="ControlsDesktop\ControlsDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MoleculeHero">
+        <MSBuild Projects="MoleculeHero\MoleculeHero.dproj"/>
+    </Target>
+    <Target Name="MoleculeHero:Clean">
+        <MSBuild Projects="MoleculeHero\MoleculeHero.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MoleculeHero:Make">
+        <MSBuild Projects="MoleculeHero\MoleculeHero.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="console101;linuxdata101;dsemployee;rsemployee;ClientFMX;LocalDB;ControlsDemo;MoleculeHero"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="console101:Clean;linuxdata101:Clean;dsemployee:Clean;rsemployee:Clean;ClientFMX:Clean;LocalDB:Clean;ControlsDemo:Clean;MoleculeHero:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="console101:Make;linuxdata101:Make;dsemployee:Make;rsemployee:Make;ClientFMX:Make;LocalDB:Make;ControlsDemo:Make;MoleculeHero:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

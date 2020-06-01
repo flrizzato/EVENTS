@@ -1,0 +1,214 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 497.000000000000000000
+    Size.Height = 137.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Refresh User List'
+    OnClick = Button1Click
+  end
+  object EditName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    Text = 'someName'
+    Position.X = 88.000000000000000000
+    Position.Y = 248.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object EditValue: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    Text = 'some value'
+    Position.X = 88.000000000000000000
+    Position.Y = 278.000000000000000000
+    Size.Width = 417.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    object ClearEditButton1: TClearEditButton
+      CanFocus = False
+      Cursor = crArrow
+      Size.Width = 28.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object ButtonUpdate: TButton
+    Position.X = 88.000000000000000000
+    Position.Y = 312.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Update Custom Value'
+    OnClick = ButtonUpdateClick
+  end
+  object EditId: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 12
+    Position.X = 64.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 441.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 248.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Value Name:'
+  end
+  object Label2: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 280.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Value Text:'
+  end
+  object Label3: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 192.000000000000000000
+    Text = 'UserID:'
+  end
+  object ButtonGet: TButton
+    Position.X = 88.000000000000000000
+    Position.Y = 344.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 16
+    Text = 'Get Custom Values'
+    OnClick = ButtonGetClick
+  end
+  object ButtonDelete: TButton
+    Position.X = 88.000000000000000000
+    Position.Y = 376.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 17
+    Text = 'Delete Custom Value'
+    OnClick = ButtonDeleteClick
+  end
+  object EMSProvider1: TEMSProvider
+    ApiVersion = '1'
+    URLHost = 'localhost'
+    URLPort = 8080
+    Left = 544
+    Top = 24
+  end
+  object BackendQuery1: TBackendQuery
+    Provider = EMSProvider1
+    BackendService = 'Users'
+    Left = 160
+    Top = 16
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'username'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = '_id'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = '_meta'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'description'
+        DataType = ftWideString
+        Size = 255
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 384
+    Top = 32
+  end
+  object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
+    Active = True
+    Dataset = FDMemTable1
+    FieldDefs = <>
+    ResponseJSON = BackendQuery1
+    Left = 280
+    Top = 40
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 360
+    Top = 216
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 76
+    Top = 5
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'username'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = '_id'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = '_id'
+      Control = EditId
+      Track = False
+    end
+  end
+  object BackendUsers1: TBackendUsers
+    Provider = EMSProvider1
+    Left = 440
+    Top = 128
+  end
+end
