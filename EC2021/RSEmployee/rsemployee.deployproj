@@ -1,0 +1,131 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup>
+        <DeviceId Condition="'$(Platform)'=='Android'"/>
+        <DeviceId Condition="'$(Platform)'=='Android64'"/>
+        <DeviceId Condition="'$(Platform)'=='iOSDevice64'"/>
+    </PropertyGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSX64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\22.0\Bpl\rsemployee.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>rsemployee.bpl</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Android'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='OSXARM64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Linux64'">
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplemsserverresource280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplemsserverresource280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bpldbrtl280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bpldbrtl280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplxmlrtl280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplxmlrtl280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="..\..\..\..\..\..\..\Public\Documents\Embarcadero\Studio\22.0\Bpl\Linux64\bplrsemployee.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplrsemployee.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDAC280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplFireDAC280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplemsserverapi280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplemsserverapi280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDACCommon280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplFireDACCommon280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplrtl280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplrtl280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDACIBDriver280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplFireDACIBDriver280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDACCommonDriver280.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>rsemployee\</RemoteDir>
+            <RemoteName>bplFireDACCommonDriver280.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice64'"/>
+</Project>

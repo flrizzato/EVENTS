@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DCF4F648-5216-4ADD-B284-3D2285FB5209}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="RichEdit\richedit.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TTreeView\TreeCheck.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCLColorsButtons\VCLControlColorsButtons.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WebBrowser\FMXWebBrowser.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Win11Corners\Win11Corners.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RSEmployee\rsemployee.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Wsl2\HelloWsl2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Wsl2\Wsl2Gui.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="richedit">
+        <MSBuild Projects="RichEdit\richedit.dproj"/>
+    </Target>
+    <Target Name="richedit:Clean">
+        <MSBuild Projects="RichEdit\richedit.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="richedit:Make">
+        <MSBuild Projects="RichEdit\richedit.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TreeCheck">
+        <MSBuild Projects="TTreeView\TreeCheck.dproj"/>
+    </Target>
+    <Target Name="TreeCheck:Clean">
+        <MSBuild Projects="TTreeView\TreeCheck.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TreeCheck:Make">
+        <MSBuild Projects="TTreeView\TreeCheck.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLControlColorsButtons">
+        <MSBuild Projects="VCLColorsButtons\VCLControlColorsButtons.dproj"/>
+    </Target>
+    <Target Name="VCLControlColorsButtons:Clean">
+        <MSBuild Projects="VCLColorsButtons\VCLControlColorsButtons.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLControlColorsButtons:Make">
+        <MSBuild Projects="VCLColorsButtons\VCLControlColorsButtons.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXWebBrowser">
+        <MSBuild Projects="WebBrowser\FMXWebBrowser.dproj"/>
+    </Target>
+    <Target Name="FMXWebBrowser:Clean">
+        <MSBuild Projects="WebBrowser\FMXWebBrowser.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXWebBrowser:Make">
+        <MSBuild Projects="WebBrowser\FMXWebBrowser.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Win11Corners">
+        <MSBuild Projects="Win11Corners\Win11Corners.dproj"/>
+    </Target>
+    <Target Name="Win11Corners:Clean">
+        <MSBuild Projects="Win11Corners\Win11Corners.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Win11Corners:Make">
+        <MSBuild Projects="Win11Corners\Win11Corners.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="rsemployee">
+        <MSBuild Projects="RSEmployee\rsemployee.dproj"/>
+    </Target>
+    <Target Name="rsemployee:Clean">
+        <MSBuild Projects="RSEmployee\rsemployee.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="rsemployee:Make">
+        <MSBuild Projects="RSEmployee\rsemployee.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HelloWsl2">
+        <MSBuild Projects="Wsl2\HelloWsl2.dproj"/>
+    </Target>
+    <Target Name="HelloWsl2:Clean">
+        <MSBuild Projects="Wsl2\HelloWsl2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HelloWsl2:Make">
+        <MSBuild Projects="Wsl2\HelloWsl2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Wsl2Gui">
+        <MSBuild Projects="Wsl2\Wsl2Gui.dproj"/>
+    </Target>
+    <Target Name="Wsl2Gui:Clean">
+        <MSBuild Projects="Wsl2\Wsl2Gui.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Wsl2Gui:Make">
+        <MSBuild Projects="Wsl2\Wsl2Gui.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="richedit;TreeCheck;VCLControlColorsButtons;FMXWebBrowser;Win11Corners;rsemployee;HelloWsl2;Wsl2Gui"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="richedit:Clean;TreeCheck:Clean;VCLControlColorsButtons:Clean;FMXWebBrowser:Clean;Win11Corners:Clean;rsemployee:Clean;HelloWsl2:Clean;Wsl2Gui:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="richedit:Make;TreeCheck:Make;VCLControlColorsButtons:Make;FMXWebBrowser:Make;Win11Corners:Make;rsemployee:Make;HelloWsl2:Make;Wsl2Gui:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
