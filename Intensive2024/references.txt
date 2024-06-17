@@ -1,0 +1,45 @@
+RAD Studio 12.x
+https://www.youtube.com/watch?v=tkGC_0KxJ8I&list=PLlUDMEtO0HdRVhMnFHbgTNTShm5CQOOwj&index=13&t=8s
+https://www.youtube.com/watch?v=ZwjJe2nDxnc&list=PLlUDMEtO0HdRVhMnFHbgTNTShm5CQOOwj&index=14&t=30s
+
+Integração Análise de Código
+https://github.com/integrated-application-development
+https://www.youtube.com/watch?v=DtPUx_Qtz5A
+https://www.youtube.com/watch?v=O2W9gdQUshU
+https://derscanner.com/
+
+Integração Docker
+https://github.com/Embarcadero/paserver-docker
+https://github.com/Embarcadero/pa-radserver-docker
+https://github.com/Embarcadero/pa-radserver-ib-docker
+https://www.youtube.com/playlist?list=PLlUDMEtO0HdTXlSbL5GkXCSjpvbuX15dX
+https://youtu.be/RdtukhUXrts?si=qc-ztDt0l5z3QBGz
+
+Integração Python
+https://github.com/Embarcadero/python4delphi
+https://github.com/Embarcadero/PyScripter
+https://github.com/Embarcadero/PythonEnvironments
+https://github.com/Embarcadero/Lightweight-Python-Wrappers
+https://github.com/Embarcadero/PythonPackages4Delphi
+https://github.com/Embarcadero/P4D-Data-Sciences
+https://github.com/Embarcadero/Delphi4PythonExporter
+https://github.com/Embarcadero/DelphiVCL4Python
+https://github.com/Embarcadero/DelphiFMX4Python
+https://github.com/Embarcadero/PythonUniverse
+https://www.youtube.com/watch?v=NYP02IQvTbo
+https://www.youtube.com/watch?v=PrGY2Hg-eh0
+https://www.youtube.com/watch?v=6D9oLc2hStU&t=3282s
+
+Interbase Change Views, .NET, Python, ODBC
+https://github.com/Embarcadero/InterBase-Docker
+https://github.com/Embarcadero/IB.NETDataProvider
+https://github.com/Embarcadero/InterBasePython
+https://github.com/Embarcadero/InterBaseODBCDriver
+https://www.youtube.com/watch?v=o-vThc4Cdqk
+https://www.youtube.com/watch?v=Uua1E4275bg
+https://www.youtube.com/watch?v=ZxzqKpLYccM
+
+
+
+Embarcadero Conference 2024:
+https://tinyurl.com/ecbr2024
