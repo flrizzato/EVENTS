@@ -1,0 +1,10 @@
+object WebModule1: TWebModule1
+  Actions = <
+    item
+      Name = 'DefaultHandler'
+      PathInfo = '/'
+      OnAction = WebModule1DefaultHandlerAction
+    end>
+  Height = 230
+  Width = 415
+end
